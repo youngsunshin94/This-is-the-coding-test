@@ -7,8 +7,8 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		String str = sc.nextLine();
-		int row = str.charAt(0) - 'a' + 1;
-		int colum = str.charAt(1) - '0';
+		int colum = str.charAt(0) - 'a' + 1;
+		int row = str.charAt(1) - '0';
 
 		int[] dx = { 2, 2, -2, -2, 1, -1, 1, -1 };
 		int[] dy = { 1, -1, 1, -1, 2, 2, -2, -2 };
