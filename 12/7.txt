@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int n = sc.nextInt();
+
+		int digit = 0;
+		int n2 = n;
+		while (n2 > 0) {
+			n2 = n2 / 10;
+			digit++;
+		}
+		
+		String str = Integer.toString(n);
+
+		int half = digit / 2;
+		int left = 0;
+		int right = 0;
+		for (int i = 0; i < digit; i++) {
+			if(i < half) {
+				left += (str.charAt(i) - '0');  
+			} else {
+				right += (str.charAt(i) - '0');
+			}
+		}
+		
+		if(left == right) {
+			System.out.println("LUCKY");
+		} else {
+			System.out.println("READY");
+		}
+	}
+}
